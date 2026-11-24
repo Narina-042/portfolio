@@ -183,29 +183,49 @@ body {
     margin-bottom: 40px;
 }
 
-/* 技能預設樣式 */
-.skills-default {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+/* 技能區 B 版本：標籤雲樣式 */
+.skills-tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.skill-item {
+.skill-tag {
     background: var(--card-bg);
-    padding: 24px;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+    color: var(--secondary);
+    border: 2px solid rgba(61, 64, 91, 0.15);
+    border-radius: 999px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    cursor: default;
+    transition: all 0.25s ease;
 }
 
-.skill-item:hover {
-    transform: translateY(-5px);
+.skill-tag:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    transform: scale(1.08) translateY(-3px);
+    box-shadow: 0 8px 20px rgba(224, 122, 95, 0.28);
 }
 
-.skill-item h3 {
-    color: var(--primary);
-    font-size: 1.1rem;
-    margin-bottom: 8px;
+.tag-lg {
+    font-size: 1.15rem;
+    padding: 12px 26px;
+}
+
+.tag-md {
+    font-size: 1rem;
+    padding: 10px 22px;
+}
+
+.tag-sm {
+    font-size: 0.9rem;
+    padding: 8px 18px;
 }
 
 /* 經歷時間軸 */
@@ -405,7 +425,6 @@ body {
         justify-content: center;
     }
 
-    .skills-default,
     .projects-grid {
         grid-template-columns: 1fr;
     }
